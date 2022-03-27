@@ -1,5 +1,5 @@
-apiVersion: V1
-kind: replicationController
+apiVersion: v1
+kind: ReplicationController
 metadata:
   name: myjenkins-rc
 spec:
