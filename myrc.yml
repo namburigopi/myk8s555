@@ -6,13 +6,15 @@ spec:
    replicas: 3
    selector: 
      app: myonlineapp
+     version: 2.7.1
    template:
      metadata:
        labels:
           app: myonlineapp
+          version: 2.7.1
      spec:
         containers:
         - name: myonlineapp-container  
-          image: gopi318/myonlineapp:1
+          image: maha4iac/myonlineapp:1
           ports:
           - containerPort: 8080 
