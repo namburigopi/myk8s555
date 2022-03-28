@@ -1,0 +1,21 @@
+apiVersion: app/v1
+kind: Deployment
+metadata:
+ name: myonlineapp-depoly
+ labels:
+   app: myonlineapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+        app: myonlineapp  
+  templata:
+    metadata:
+       labels:
+        app: myonlineapp 
+    spec: 
+      containers:
+      - name: myonlineapp-cotainer
+        image: maha4iac/myonlineapp:1
+        ports:
+        - containerPort: 8080    
